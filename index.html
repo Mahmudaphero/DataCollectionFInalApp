@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--Daisy UI-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800" >
+  <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+   <header>
+    <nav class="flex justify-around items-center">
+        <img class="mix-blend-multiply w-20" src="images/nav2.PNG" alt="">
+        <div>
+            <h1 class="text-2xl font-bold text-blue-950">Data Collection</h1>
+            <p class="border border-blue-950 text-blue-950 p-1 text-center text-xl font-semibold">Dept.EEE,IUB</p>
+        </div>
+        <button class="btn">Logout</button>
+    </nav>
+   </header>
+
+   <main>
+    
+     <section class="bg-gray-900 text-white flex flex-col items-center justify-center  p-6 my-5">
+        <h1 class="text-xl mb-4 font-bold">📹 Upload MP4 Video to Extract PPG</h1>
+  
+        <form id="uploadForm" enctype="multipart/form-data" class="bg-gray-800 p-4 rounded shadow">
+          <input type="file" name="video" accept="video/mp4" class="mb-4" required />
+          <button type="submit" class="bg-green-500 px-4 py-2 rounded hover:bg-green-600">Upload</button>
+        </form>
+      
+        <!-- Feedback Message -->
+        <p id="statusMsg" class="mt-4 text-sm hidden"></p>
+     </section>
+    
+    
+    
+     <section class="flex justify-center mt-10 px-4">
+        <form action="" class="w-full max-w-sm mx-auto flex flex-col gap-4">
+          <input id="user-name" type="text" placeholder="Enter Your Name" class="p-2 border-black-900 rounded" />
+          <input id="user-age" type="number" placeholder="Enter Your Age" class="p-2 border-black-900 rounded" />
+          
+          <select id="user-gender" name="gender" class="p-2 border-black-900 rounded">
+            <option value="">-- Enter Gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          
+          <input id="user-blood-group" type="text" placeholder="Enter Your Blood Group" class="p-2 border-black-900 rounded" />
+          <input id="user-body-weight" type="number" placeholder="Enter Your Body Weight" class="p-2 border-black-900 rounded" />
+          <button id="submit-btn" type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+            Save & Submit
+          </button>
+          
+        </form>
+       
+
+       
+      </section>
+      <section class="px-4 mt-6">
+        <div class="overflow-y-auto max-h-64 border border-gray-400 rounded">
+          <table class="table-auto w-full bg-white text-black text-sm font-medium">
+            <thead class="sticky top-0 bg-gray-300 text-left z-10">
+              <tr>
+                <th class="border px-4 py-2">Name</th>
+                <th class="border px-4 py-2">Age</th>
+                <th class="border px-4 py-2">Gender</th>
+                <th class="border px-4 py-2">Blood Group</th>
+                <th class="border px-4 py-2">Weight</th>
+              </tr>
+            </thead>
+            <tbody id="cart-container">
+              <!-- Data gets added here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      
+
+    
+   </main>
+
+
+</section>
+  <script src="script/video.js"></script>
+  <script src="script/cart.js"></script>
+</body>
+</html>
