@@ -10,8 +10,8 @@ const form = document.getElementById("uploadForm");
       statusMsg.textContent = '';
 
       try {
-        //const res = await fetch("http://103.81.70.4:8000/video_folder", {
-        const res = await fetch("https://103.81.70.4:8000/video_folder", {
+        const res = await fetch("http://103.81.70.4:8000/video_folder", {
+        //const res = await fetch("https://103.81.70.4:8000/video_folder", {
           method: "POST",
           body: formData,
         });
